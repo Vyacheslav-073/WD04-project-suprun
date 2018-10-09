@@ -1,0 +1,17 @@
+.notify--success {
+    background-image: -webkit-linear-gradient(90deg, #08711c 0%, #2cb951 100%);
+    background-image: -ms-linear-gradient(90deg, #08711c 0%, #2cb951 100%);
+    color: #fff;
+}
+
+.notify--update {
+    background-image: -webkit-linear-gradient(90deg, #3d7aa0 0%, #8abbda 100%);
+    background-image: -ms-linear-gradient(90deg, #3d7aa0 0%, #8abbda 100%);
+    color: #fff;
+}
+
+.notify--error {
+    background-image: -webkit-linear-gradient(90deg, #971515 0%, #c93232 100%);
+    background-image: -ms-linear-gradient(90deg, #971515 0%, #c93232 100%);
+    color: #fff;
+}
