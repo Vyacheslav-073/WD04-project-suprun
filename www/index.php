@@ -65,11 +65,23 @@ switch ( $uri[0]) {
 
     case 'contacts':
         include "modules/contacts/index.php";
-        break;
+        break;*/
+        
+//::::::::::::::: BLOG :::::::::::::::::::::::::
 
     case 'blog':
-        include "modules/blog/index.php";
-        break;*/
+        include ROOT . "modules/blog/index.php";
+        break;
+        
+    case 'blog/post-new':
+        include ROOT . "modules/blog/post-new.php";
+        break;
+        
+    case 'blog/post':
+        include ROOT . "modules/blog/post.php";
+        break;
+        
+//:::::::::::::: / BLOG ::::::::::::::::::::::::
 
     default:
         include "modules/main/index.php";

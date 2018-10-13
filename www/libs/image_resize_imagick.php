@@ -29,4 +29,36 @@ function createThumbnail($imagePath, $cropWidth = 100, $cropHeight = 100){
 	return $imagick;
 }
 
+	function createThumbnailCrop ($imagePath, $cropWidth, $cropHeight){
+
+        // чтение изображения
+        $imagick=new Imagick($imagePath);
+        $width=$imagick->getImageWidth();
+        $height=$imagick->getImageHeight();
+        $imagick->cropThumbnailImage($cropWidth, $cropHeight);
+        return $imagick;
+        $imagick->destroy();
+
+	}
+
+    function createThumbnailBig($imagePath, $cropWidth, $cropHeight){
+
+        // чтение изображения
+		$imagick=new Imagick($imagePath);
+		$width=$imagick->getImageWidth();
+		$height=$imagick->getImageHeight();
+
+        if($width>$height){
+
+	       // для широких картинок
+			$imagick->thumbnailImage( $cropWidth, 0);
+
+		}else{
+			$imagick->thumbnailImage( 0, $cropHeight);
+		}
+
+		return $imagick;
+		$imagick->destroy();									
+    }
+
 ?>
