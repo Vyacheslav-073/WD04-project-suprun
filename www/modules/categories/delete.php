@@ -1,5 +1,10 @@
 <?php
 
+if (!isAdmin()){
+	header("Location:" . HOST);
+	die();
+}
+
 $title="Удалить категории";
 
 $cat=R::load('categories', $_GET['id']);

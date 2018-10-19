@@ -1,12 +1,3 @@
-<?php
-  
-echo "<pre>";
-print_r($_POST);
-echo "</pre>";  
-  
-?>
-   
-
 <div class="content">
     <div class="container user-content section-page">
         <div class="row">
@@ -19,6 +10,16 @@ echo "</pre>";
                     <div class="form-group">
                        <label class="label">Название
                             <input class="input" name="postTitle" type="text" placeholder="Введите название" />
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="label">Категория
+                            <select name="postCat">
+                                <?php foreach($cats as $cat): ?>
+                                    <option value="<?=$cat['id']?>"><?=$cat['cat_title']?></option>
+                                <?php endforeach ?>
+                            </select>
                         </label>
                     </div>
                 
@@ -34,7 +35,8 @@ echo "</pre>";
                 
                     <div class="form-group">
                         <label class="label">Содержание
-                            <textarea class="textarea" name="postText" type="type" placeholder="Введите текст поста"></textarea>
+                            <textarea id="ckEditor" class="textarea" name="postText" type="type" placeholder="Введите текст поста"></textarea>
+                            <?php include_once ROOT . "templates/_parts/_ckEditorConnect.tpl" ?>
                         </label>
                     </div>
                 

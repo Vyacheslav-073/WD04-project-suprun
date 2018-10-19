@@ -16,7 +16,7 @@
         <div class="card__desc">
             <div class="card__title">
                 
-                <?=mbCutString($post->title, 48)?>
+                <?=mbCutString($post->title, 42)?>
                             
             </div>
             <a class="button" href="<?=HOST?>blog/post?id=<?=$post->id?>">Читать</a>

@@ -19,3 +19,7 @@
 .header-nav__link--active {
     border-bottom: none;
 }
+
+.mr-100{
+	margin-right: 100px !important; 
+}

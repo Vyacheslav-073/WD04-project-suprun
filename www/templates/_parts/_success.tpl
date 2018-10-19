@@ -8,7 +8,7 @@
                 <?=$item['title']?>
             </div>
 
-<?<php  } else if (count($item) == 2) { ?>
+<?php  } else if (count($item) == 2) { ?>
 
     <!-- Ошибка с описанием -->
     <div class="notify no-paddings">
