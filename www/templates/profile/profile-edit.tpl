@@ -14,7 +14,7 @@
 
                 <div class="form-group">
                     <label class="label">Имя
-						<input class="input" name="name" type="text" placeholder="Введите имя" value="<?=$currentUser->name?>" />
+						<input class="input" name="name" type="text" placeholder="Введите имя" value="<?=$currentUser->name?>" />			 
 					</label>
                 </div>
 

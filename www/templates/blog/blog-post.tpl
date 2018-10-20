@@ -90,25 +90,33 @@
 
 				        </div>
 				    </div>
-
+				    
+                    <!-- Добавление комментария -->
 				    <h2> Оставить комментарий</h2>
 
-				    <div class="comment-add-block">
+				    <form class="comment-add-block" id="commentForm" method="POST" action="<?=HOST?>blog/post?id=<?=$post['id']?>">
                     
 				        <div class="comment-add-block__left">
 				            <div class="avatar avatar--small">
-				                <img src="../img/avatars/avatar-1.jpg" alt="avatar" />
+				                <?php if ( $_SESSION['logged_user']['avatar'] != "" ) { ?>
+				                <img src="<?=HOST?>usercontent/avatar/<?=$_SESSION['logged_user']['avatar']?>" alt="<?=$_SESSION['logged_user']['name']?><?=$_SESSION['logged_user']['secondname']?>" />
+				                <?php } ?>
 				            </div>
 				        </div>
 
 				        <div class="comment-add-block__right">
-				            <h6 class="comment-add-block__right-title">Юрий Ключевский</h6>
-				            <div class="notify notify--error">Комментарий не может быть пустым</div>
-				            <textarea class="textarea textarea--comment-add" name="add_comment" placeholder="Присоединиться к обсуждению..."></textarea>
-				            <a class="button" href="#">Опубликовать</a>
+				            <div class="comment-add-block__right-title">
+				                <?=$_SESSION['logged_user']['name']?>
+				                <?=$_SESSION['logged_user']['secondname']?>
+				            </div>
+				            <div class="notify notify--error" style="display: none;" data-error-comment-empty >Комментарий не может быть пустым</div>
+				            <textarea class="textarea textarea--comment-add" name="textComment" placeholder="Присоединиться к обсуждению..."></textarea>
+				            <input type="hidden" value="newComment" name="addComment">
+				            <input type="submit" class="button" value="Опубликовать" data-add-comment >
 				        </div>
 
-				    </div>
+				    </form>
+                    <!-- // Добавление комментария -->    
            
             </div>
         </div>

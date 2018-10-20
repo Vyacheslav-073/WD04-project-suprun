@@ -15,6 +15,24 @@ $post = $post[0];
 
 $title = $post['title'];
 
+if(isset($_POST['addComment'])){
+
+	if(trim($_POST['textComment'])==''){
+		$errors[]=['title'=>'Введите текст комментария'];
+	}
+
+	if(empty($errors)){
+
+		$comment=R::dispense('comments');
+		$comment->postId=htmlentities($_GET['id']);
+		$comment->userId=htmlentities($_SESSION['logged_user']['id']);
+		$comment->text=htmlentities($_POST['textComment']);		
+		$comment->dateTime=R::isoDateTime();
+        
+		R::store($comment);
+	}
+}
+
 // Готовим контент для центральной части
 ob_start();
 include ROOT . "templates/_parts/_header.tpl";
