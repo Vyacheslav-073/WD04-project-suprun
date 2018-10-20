@@ -42,10 +42,11 @@
 				        <div class="formInput-image">
 				            <img src="<?=HOST?>usercontent/blog/<?=$post['post_img_small']?>" />
 				            <div class="formInput-image__delete-button">
-				                <a class="button button--small button--remove" href="#">Удалить</a>
+				                <label class="button button--small button--remove" for="deleteImg">Удалить</label>
 				            </div>
                         </div>
                     </div>
+                    <input id="deleteImg" type="checkbox" name="deleteImg" value="yes">
 				    <?php } ?>
                 
                     <div class="form-group">

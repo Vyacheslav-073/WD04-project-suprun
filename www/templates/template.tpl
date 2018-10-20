@@ -1,5 +1,9 @@
-<body class="index-page footer-bottom">
+<body class="Home-page">
+	<div class="wrapper">
+        <div class="wrap-top">
 
 <?php
-    echo $content;
-?>
+echo $content;
+?> 
+	           
+	</div>	

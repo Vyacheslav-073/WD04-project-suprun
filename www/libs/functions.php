@@ -110,7 +110,7 @@ function commentNumber ($num) {
 		if($number > 1 ) {$term = "я";}
 		if($number > 4 ) {$term = "ев";}
 	}
-	echo  $num.' комментарий'.$term;
+	echo  $num.' комментари'.$term;
 }
 
 // Adjusting text encoding

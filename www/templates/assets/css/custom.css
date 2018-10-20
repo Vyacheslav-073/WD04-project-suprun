@@ -20,6 +20,15 @@
     border-bottom: none;
 }
 
-.mr-100{
-	margin-right: 100px !important; 
+.hide {
+    display: none;
+}
+
+.mr-200 {
+    margin-right: 200px !important;
+}
+
+.button_position{
+	position: absolute;
+	right: 140px;
 }

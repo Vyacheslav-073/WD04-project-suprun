@@ -10,7 +10,7 @@ $title = "Редактировать пост";
 $post = R::load('posts', $_GET['id']);
 $cats = R::find('categories', 'ORDER BY cat_title ASC');
 
-if ( isset($_POST['postUpdate'])) {
+if ( isset($_POST['postUpdate'])) {    
     
     if( trim($_POST['postTitle']) == '' ) {
         $errors[] = ['title' => ' Введите Название поста'];
@@ -27,6 +27,13 @@ if ( isset($_POST['postUpdate'])) {
         $post->authorID = $_SESSION['logged_user']['id'];
         $post->updateTime = R::isoDateTime();
         
+        if ( isset($_POST['deleteImg']) && $_POST['deleteImg'] == 'yes') {
+            unlink( ROOT . 'usercontent/blog/' . $post->postImg );
+            unlink( ROOT . 'usercontent/blog/' . $post->postImgSmall );
+            $post->postImg = '';
+            $post->postImgSmall = '';
+        }
+                
         if ( isset($_FILES["postImg"]["name"]) && $_FILES["postImg"]["tmp_name"] != "" ){
             
             // Обработка изображений
