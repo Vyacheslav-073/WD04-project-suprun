@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 20 2018 г., 22:08
+-- Время создания: Окт 21 2018 г., 20:31
 -- Версия сервера: 5.5.58-log
 -- Версия PHP: 5.5.38
 
@@ -96,6 +96,33 @@ INSERT INTO `comments` (`id`, `post_id`, `user_id`, `text`, `date_time`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `contacts`
+--
+
+CREATE TABLE `contacts` (
+  `id` int(11) NOT NULL,
+  `email` varchar(191) DEFAULT NULL,
+  `phone` varchar(191) DEFAULT NULL,
+  `address` varchar(191) DEFAULT NULL,
+  `name` varchar(191) DEFAULT NULL,
+  `secondname` varchar(191) DEFAULT NULL,
+  `skype` varchar(191) DEFAULT NULL,
+  `vk` varchar(191) DEFAULT NULL,
+  `fb` varchar(191) DEFAULT NULL,
+  `github` varchar(191) DEFAULT NULL,
+  `twitter` varchar(191) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `email`, `phone`, `address`, `name`, `secondname`, `skype`, `vk`, `fb`, `github`, `twitter`) VALUES
+(1, 'info3@mail.com', '+7 800 1273228', 'Канзас', 'Tony ', 'Stark', 'Tony-Stark', 'https://vk.com', 'https://Facebook.com', 'https://github.com/', 'https://Twitter.com');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `posts`
 --
 
@@ -153,7 +180,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `email`, `password`, `role`, `name`, `secondname`, `city`, `country`, `avatar`, `avatar_small`, `recovery_code`, `recovery_code_times`) VALUES
 (19, 'info@mail.com', '$2y$10$v6Fwcj6exG963KaTTl6c/O2nbOsQtSbYFfu/ihsnAfAI50dkC6oSK', 'admin', 'Емельян', 'Казаков', 'Москва', 'Россия', '1087486968.jpg', '48-1087486968.jpg', NULL, NULL),
 (20, 'info2@mail.com', '$2y$10$pyvOHpduKEIwxVCg1/VBE.0YIM8ipW/QHCoFQwsghMOwkGFcsWgQK', 'user', 'Алёна', 'Иванова', 'Ростов на Дону', 'Россия', '554560677.jpg', '48-554560677.jpg', NULL, NULL),
-(21, 'info3@mail.com', '$2y$10$x/mlQ.N9g3YG3TgyZn8zQeXJ4wEMJ8jnY/gzQC.qLlPVQSp1aRkJO', 'user', 'Tony ', 'Stark', 'Канзас', 'USA', NULL, NULL, NULL, NULL);
+(21, 'info3@mail.com', '$2y$10$x/mlQ.N9g3YG3TgyZn8zQeXJ4wEMJ8jnY/gzQC.qLlPVQSp1aRkJO', 'user', 'Tony ', 'Stark', 'Канзас', 'USA', '181862141.jpg', '48-181862141.jpg', NULL, NULL);
 
 --
 -- Индексы сохранённых таблиц
@@ -178,6 +205,12 @@ ALTER TABLE `comments`
   ADD PRIMARY KEY (`id`),
   ADD KEY `index_foreignkey_comments_post` (`post_id`),
   ADD KEY `index_foreignkey_comments_user` (`user_id`);
+
+--
+-- Индексы таблицы `contacts`
+--
+ALTER TABLE `contacts`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Индексы таблицы `posts`
@@ -215,10 +248,16 @@ ALTER TABLE `comments`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
+-- AUTO_INCREMENT для таблицы `contacts`
+--
+ALTER TABLE `contacts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT для таблицы `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT для таблицы `users`

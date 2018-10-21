@@ -61,12 +61,8 @@ switch ( $uri[0]) {
 
     /*case 'about':
         include "modules/about/index.php";
-        break;
-
-    case 'contacts':
-        include "modules/contacts/index.php";
         break;*/
-        
+
 //::::::::::::::: Categories ::::::::::::::::::::: 
         
     case 'blog/categories':
@@ -110,6 +106,22 @@ switch ( $uri[0]) {
         break;
         
 //:::::::::::::: / BLOG ::::::::::::::::::::::::
+        
+//:::::::::::::: CONTACTS ::::::::::::::::::::::::
+        
+    case 'contacts':
+        include "modules/contacts/index.php";
+        break;
+        
+    case 'contacts-edit':
+        include "modules/contacts/edit.php";
+        break;
+        
+    case 'messages':
+        include "modules/contacts/messages.php";
+        break;
+        
+//:::::::::::::: / CONTACTS ::::::::::::::::::::::::
 
     default:
         include "modules/main/index.php";
