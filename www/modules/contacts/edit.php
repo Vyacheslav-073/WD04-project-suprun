@@ -5,9 +5,7 @@ if ( !isAdmin() ) {
     die;
 }
 
-$title = "Контакты";
-
-//$cats = R::find('categories', 'ORDER BY cat_title DESC');
+$title = " Редактировать контакты";
 
 $contacts = R::load('contacts', 1);
 

@@ -1,4 +1,4 @@
-<div class="content">
+ <div class="content">
     <div class="container user-content section-page">
         
         <?php if ( isAdmin() ) { ?>
@@ -123,15 +123,19 @@
             </div>
             <div class="offset-md-1 col-md-4">
 				<div class="contacts__title title-1">Связаться со мной</div>
-				<form class="form-contacts" action="">
+				
+				<?php include( ROOT . 'templates/_parts/_errors.tpl') ?>
+				<?php include( ROOT . 'templates/_parts/_success.tpl') ?>
+				
+				<form class="form-contacts" action="<?=HOST?>contacts" method="POST" enctype="multipart/form-data">
 				    <div class="form-group">
                         <label class="label">
-                            <input class="input" name="firstname" type="text" placeholder="Введите имя" />
+                            <input class="input" name="name" type="text" placeholder="Введите имя" />
                         </label>
                     </div>
 				    <div class="form-group">
                         <label class="label">
-                            <input class="input" name="firstname" type="text" placeholder="Email" />
+                            <input class="input" name="email" type="text" placeholder="Email" />
                         </label>
                     </div>
 				    <div class="form-group">
@@ -145,7 +149,7 @@
 				        <input class="inputfile" type="file" name="file" id="file" />
 				        <label class="label-input-file" for="file">Выбрать файл</label>
 				        <span>Файл не выбран</span>
-				        <input class="button button--save" type="submit" value="Отправить" />
+				        <input class="button button--save" name="newMessage" type="submit" value="Отправить" />
 				    </div>
 				</form>
             </div>

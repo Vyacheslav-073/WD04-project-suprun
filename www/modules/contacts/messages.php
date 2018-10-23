@@ -1,8 +1,8 @@
 <?php
 
-$title = "Контакты";
+$title = "Сообщения";
 
-//$cats = R::find('categories', 'ORDER BY cat_title DESC');
+$messages = R::find('messages', 'ORDER BY id DESC');
 
 // Готовим контент для центральной части
 ob_start();

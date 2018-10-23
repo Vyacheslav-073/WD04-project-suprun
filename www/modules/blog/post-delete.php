@@ -5,12 +5,9 @@ if (!isAdmin()){
 	die();
 }
 
-
-
 $title = "Удалить пост";
 
 $post = R::load('posts', $_GET['id']);
-
 
 if(isset($_POST['postDelete'])){    
     $postImageFolderLocation=ROOT.'usercontent/blog/';

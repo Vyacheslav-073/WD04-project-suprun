@@ -8,10 +8,9 @@
 ?> 
 <div class="content">
     <div class="container contacts-edit section-page">
-        <div class="contacts-edit-block user-content">
+        <form action="<?=HOST?>contacts-edit" method="POST" class="contacts-edit-block user-content">
             <div class="title-1">Редактировать данные</div>
             <?php include ROOT . "templates/_parts/_errors.tpl"; ?>
-            <form action="<?=HOST?>contacts-edit" method="POST">
                 <div class="row">
 				    <div class="col-md-3">
 				        <div class="form-group">
@@ -20,7 +19,7 @@
 				                    name="name" 
 				                    type="text" 
 				                    placeholder="Введите имя" 
-				                    value="<?php dataFromPost('name'); ?>" 
+				                    value="<?php dataFromPost('name') ?>" 
 				                />
 				            </label>
 				        </div>
@@ -30,7 +29,7 @@
 				                    name="secondname" 
 				                    type="text" 
 				                    placeholder="Введите фамилию" 
-				                    value="<?php dataFromPost('secondname'); ?>" 
+				                    value="<?php dataFromPost('secondname') ?>" 
 				                />
 				                
 				            </label>
@@ -43,7 +42,7 @@
 				                    name="email" 
 				                    type="text" 
 				                    placeholder="Введите email" 
-				                    value="<?php dataFromPost('email'); ?>" 
+				                    value="<?php dataFromPost('email') ?>" 
 				                />
 				            </label>
 				        </div>
@@ -53,7 +52,7 @@
 				                    name="skype" 
 				                    type="text" 
 				                    placeholder="Введите skype" 
-				                    value="<?php dataFromPost('skype'); ?>" 
+				                    value="<?php dataFromPost('skype') ?>" 
 				                />
 				            </label>
 				        </div>
@@ -67,7 +66,7 @@
 				                    name="vk" 
 				                    type="text" 
 				                    placeholder="Введите ссылку на профиль" 
-				                    value="<?php dataFromPost('vk'); ?>"  
+				                    value="<?php dataFromPost('vk') ?>"  
 				                />
 				            </label>
 				        </div>
@@ -79,7 +78,7 @@
 				                    name="fb" 
 				                    type="text" 
 				                    placeholder="Введите ссылку на профиль" 
-				                    value="<?php dataFromPost('fb'); ?>"  
+				                    value="<?php dataFromPost('fb') ?>"  
 				                />
 				            </label>
 				        </div>
@@ -91,7 +90,7 @@
 				                    name="github" 
 				                    type="text" 
 				                    placeholder="Введите ссылку на профиль"
-				                    value="<?php dataFromPost('github'); ?>"   
+				                    value="<?php dataFromPost('github') ?>"   
 				                />
 				            </label>
 				        </div>
@@ -103,7 +102,7 @@
 				                    name="twitter" 
 				                    type="text" 
 				                    placeholder="Введите ссылку на профиль"
-				                    value="<?php dataFromPost('twitter'); ?>" 
+				                    value="<?php dataFromPost('twitter') ?>" 
 				                />
 				            </label>
 				        </div>
@@ -115,7 +114,7 @@
 				                    name="phone" 
 				                    type="text" 
 				                    placeholder="Введите телефон"
-				                    value="<?php dataFromPost('phone'); ?>" 
+				                    value="<?php dataFromPost('phone') ?>" 
 				                />
 				            </label>
 				        </div>
@@ -127,7 +126,7 @@
 				                    name="address" 
 				                    type="text" 
 				                    placeholder="Введите адрес"
-				                    value="<?php dataFromPost('address'); ?>"  
+				                    value="<?php dataFromPost('address') ?>"  
 				                />
 				            </label>
 				        </div>
@@ -136,8 +135,7 @@
                 <div class="contacts-edit-btn">
                     <input type="submit" name="contactsUpdate" class="button button--save mr-20" value="Сохранить"/>
                     <a class="button" href="<?=HOST?>contacts">Отмена</a>
-                </div>
-            </form>    
-        </div>        
+                </div>    
+        </form>        
     </div>
 </div>
