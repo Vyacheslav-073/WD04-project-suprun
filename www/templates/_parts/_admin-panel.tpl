@@ -43,14 +43,14 @@
         </li>
 
         <li class="admin-nav-item">
-            <a class="admin-nav__link" href="#">
+            <a class="admin-nav__link" href="<?=HOST?>portfolio">
 				<i class="fas fa-plus-circle"></i>
 				<span class="ml-10">Работа</span>
 			</a>
         </li>
 
         <li class="admin-nav-item">
-            <a class="admin-nav__link" href="#">
+            <a class="admin-nav__link" href="<?=HOST?>about">
 				<i class="fas fa-edit"></i>
 				<span class="ml-10">Обо мне</span>
 			</a>

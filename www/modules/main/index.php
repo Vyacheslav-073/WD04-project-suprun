@@ -1,13 +1,11 @@
 <?php
 
-$details = R::find('about', 1);
-//print_r($details);
-
-$aboutName = $details[1]['name'];
-$aboutDesc = $details[1]['desc'];
-
 $title = "Главная";
 $content = "Содержимое главной страницы";
+
+$about=R::findOne('about', 1);
+$post=R::find('posts','ORDER BY ID DESC LIMIT 3');
+$work=R::find('works','ORDER BY ID DESC LIMIT 3');
 
 // Готовим контент для центральной части
 ob_start();
