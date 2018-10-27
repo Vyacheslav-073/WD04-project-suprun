@@ -1,25 +1,25 @@
 <?php
 
-if (!isAdmin()){
-	header("Location:" . HOST);
+if (!isAdmin()) {
+	header("Location: " . HOST);
 	die();
 }
 
-$title = "Удалить категории";
+$title = "Удаление места работы";
 
-$cat = R::load('categories', $_GET['id']);
+$job = R::load('jobs', $_GET['id']);
 
-if( isset($_POST['catDelete']) ) {
+if( isset($_POST['jobDelete']) ) { 
 
-    R::trash($cat);
+    R::trash($job);
 
-    header("Location: " . HOST . "blog/categories?result = catDeleted");
+    header("Location: " . HOST . "about?result = messageDelete");
     exit();
 }
 
 ob_start();
 include ROOT. "templates/_parts/_header.tpl";
-include ROOT."templates/categories/delete.tpl";
+include ROOT."templates/about/jobs-delete.tpl"; 
 $content = ob_get_contents();
 ob_end_clean();
 

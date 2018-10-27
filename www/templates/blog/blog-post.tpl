@@ -11,7 +11,7 @@
 						?>
                         <h1 class="<?=$additionalHeaderClass?>"><?=$post['title']?></h1>
                     	
-				        <?php  if (isAdmin()) { ?>														
+				        <?php  if (isAdmin()) {?>														
 				        <div class="button-right-top">
 				            <a class="button_position button button--edit mt-25" href="<?=HOST?>blog/post-edit?id=<?=$post['id']?>">Редактировать</a>
 				            <a class="button button--remove mt-25" href="<?=HOST?>blog/post-delete?id=<?=$post['id']?>">Удалить</a>
@@ -24,7 +24,7 @@
 				        <div class="post-info__topic"><a class="post-info__link" href="#"><?=$post['cat_title']?></a></div>					
 				        <div class="post-info__date"><? echo rus_date(" d F Y H:i", strtotime($post['date_time']));?></div>
 				
-				        <?php if (count($comments)>0){?>
+				        <?php if (count($comments) > 0) {?>
 				            <div class="post-info__comments"><a class="post-info__link" href="#comment"><?php commentNumber(count($comments));?></a></div>
 				        <?php }?>
 				    </div>			
@@ -42,7 +42,7 @@
                     <a class="button button--icon-left" href="#"><i class="fas fa-arrow-left"></i>Назад</a>
                     <a class="button button--icon-right button-blog-next" href="#">Вперёд<i class="fas fa-arrow-right"></i></a>
                 </div>
-				<?php if (count($comments)>0){?>
+				<?php if (count($comments) > 0) {?>
 				<h2 id='comment'> <?php commentNumber(count($comments));?></h2>
 				    <?php foreach ($comments as $comment){?>
 				        <?php include ROOT. "templates/blog/_comment-card.tpl" ?>

@@ -1,7 +1,7 @@
 <?php
 
-if (!isAdmin()) {
-	header("Location:" . HOST);
+if(!isAdmin()) {
+	header("Location: " . HOST);
 	die();
 }
 
@@ -9,17 +9,17 @@ $jobs = R::find("jobs", "ORDER BY ID DESC");
 
 $title = "Редактировать - опыт работы";
 
-if ( isset($_POST['newJob']) ) {
+if( isset($_POST['newJob']) ) {
 
-	if ( trim($_POST['period'])=='' ) {
+	if( trim($_POST['period'])=='' ) {
 		$errors[]=['title'=>'Введите период работы'];
 	}
 
-	if ( trim($_POST['description']) =='' ) {
+	if( trim($_POST['description']) =='' ) {
 		$errors[]=['title'=>'Введите описание'];
 	}
     
-    if ( trim($_POST['title']) =='' ) {
+    if( trim($_POST['title']) =='' ) {
 		$errors[]=['title'=>'Введите место работы'];
 	}
 
@@ -32,7 +32,7 @@ if ( isset($_POST['newJob']) ) {
 		
 		R::store($job);
 
-		header("Location:" . HOST . "about");
+		header("Location: " . HOST . "about");
 		exit(); 
 	}
 }

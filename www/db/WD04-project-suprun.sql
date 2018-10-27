@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 27 2018 г., 13:24
+-- Время создания: Окт 27 2018 г., 18:51
 -- Версия сервера: 5.5.58-log
 -- Версия PHP: 5.5.38
 
@@ -40,7 +40,7 @@ CREATE TABLE `about` (
 --
 
 INSERT INTO `about` (`id`, `name`, `description`, `photo`) VALUES
-(4, 'Вячеслав, Супрун', '<p>Я начинающий веб разработчик из Ростова на Дону.&nbsp; &nbsp;</p>\r\n\r\n<h2>Что я умею</h2>\r\n\r\n<p>Прошёл два курса в школе веб разработки - &quot;Webcademy.ru&quot;.</p>\r\n\r\n<p>Курс по вёрстке и веб разработке.</p>\r\n', '-148496418.jpg');
+(1, 'Вячеслав, Супрун', '<p>Я начинающий веб разработчик из Ростова на Дону.&nbsp; &nbsp;</p>\r\n\r\n<h2>Что я умею</h2>\r\n\r\n<p>Прошёл два курса в школе веб разработки - &quot;Webcademy.ru&quot;.</p>\r\n\r\n<p>Курс по вёрстке и веб разработке.</p>\r\n', '-148496418.jpg');
 
 -- --------------------------------------------------------
 
@@ -139,7 +139,8 @@ CREATE TABLE `jobs` (
 --
 
 INSERT INTO `jobs` (`id`, `title`, `description`, `period`) VALUES
-(1, 'Студент', 'Изучение основ HTML, CSS, JS, PHP.', 'Январь - Ноябрь 2018г.');
+(2, 'Студент', 'Обучение на курсе веб разработке, в школе он лайн обучения &quot;Webcademy.ru&quot;.', 'Август - ноябрь 2018г.'),
+(3, 'Студент', 'Обучение на курсе - &quot;Верстальщик&quot;, в школе он лайн обучения &quot;Webcademy.ru&quot;.', 'Май - Август 2018г.');
 
 -- --------------------------------------------------------
 
@@ -345,7 +346,7 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT для таблицы `jobs`
 --
 ALTER TABLE `jobs`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблицы `messages`
