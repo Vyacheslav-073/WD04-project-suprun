@@ -1,4 +1,4 @@
-<?PHP foreach($jobs as $job){?>
+<?php foreach($jobs as $job){?>
 	<div class="user-message mb-20">	
 		<div class="user-message__top">
 			<div class="user-message__date"><?=$job->period?></div>
@@ -11,4 +11,4 @@
 			<?=$job->description?>
 		</div>		
 	</div>
-<?PHP }?>
+<?php }?>

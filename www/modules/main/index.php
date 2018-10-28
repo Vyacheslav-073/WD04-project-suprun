@@ -3,9 +3,9 @@
 $title = "Главная";
 $content = "Содержимое главной страницы";
 
-$about=R::findOne('about', 1);
-$post=R::find('posts','ORDER BY ID DESC LIMIT 3');
-$work=R::find('works','ORDER BY ID DESC LIMIT 3');
+$about = R::findOne('about', 1);
+$post = R::find('posts','ORDER BY ID DESC LIMIT 3');
+$work = R::find('works','ORDER BY ID DESC LIMIT 3');
 
 // Готовим контент для центральной части
 ob_start();

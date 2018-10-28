@@ -77,6 +77,10 @@ switch ( $uri[0]) {
         include ROOT . "modules/about/edit-jobs.php";
         break;
         
+    case 'about/jobs-delete':
+        include ROOT . "modules/about/jobs-delete.php";
+        break;
+        
 //::::::::::::::: / ABOUT :::::::::::::::::::::
 
 //::::::::::::::: Categories ::::::::::::::::::::: 
@@ -142,6 +146,30 @@ switch ( $uri[0]) {
         break;
         
 //:::::::::::::: / CONTACTS ::::::::::::::::::::::::
+        
+//:::::::::::::: PORTFOLIO ::::::::::::::::::::::::
+        
+    case 'portfolio':
+        include ROOT."modules/portfolio/index.php";
+        break;	
+
+    case 'portfolio/portfolio-new':
+        include ROOT."modules/portfolio/portfolio-new.php";
+        break;	 
+
+    case 'portfolio/portfolio-edit':
+        include ROOT."modules/portfolio/portfolio-edit.php";
+        break;	 
+		 
+    case 'portfolio/post':
+        include ROOT."modules/portfolio/post.php";
+        break;
+
+	case 'portfolio/portfolio-delete':
+        include ROOT."modules/portfolio/portfolio-delete.php";
+        break;
+        
+//:::::::::::::: // PORTFOLIO ::::::::::::::::::::::::
 
     default:
         include "modules/main/index.php";

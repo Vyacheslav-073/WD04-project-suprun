@@ -9,17 +9,17 @@ $title = "Удаление места работы";
 
 $job = R::load('jobs', $_GET['id']);
 
-if( isset($_POST['jobDelete']) ) { 
+if( isset($_POST['jobDelete']) ) {
 
-    R::trash($job);
+	R::trash($job);
 
-    header("Location: " . HOST . "about?result = messageDelete");
-    exit();
+	header("Location: " . HOST . "about?result = messageDelete");
+	exit();
 }
 
 ob_start();
 include ROOT. "templates/_parts/_header.tpl";
-include ROOT."templates/about/jobs-delete.tpl"; 
+include ROOT."templates/about/jobs-delete.tpl";
 $content = ob_get_contents();
 ob_end_clean();
 
