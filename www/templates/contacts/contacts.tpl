@@ -1,4 +1,4 @@
- <div class="content">
+<div class="content">
     <div class="container user-content section-page">
         
         <?php if ( isAdmin() ) { ?>

@@ -20,7 +20,22 @@
                         </ul>
                     </nav>
 
-                    <div class="footer__item footer__icons col-lg-4"><a href="#" target="_blank"><i class="fab fa-vk"></i></a><a href="#" target="_blank"><i class="fab fa-twitter"></i></a><a href="#" target="_blank"><i class="fab fa-youtube"></i></a><a href="#" target="_blank"><i class="fab fa-instagram"></i></a><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <div class="footer__item footer__icons col-lg-4">
+                        <a href="https://vk.com/id372948519" target="_blank">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCLJb4d7g0ypsKxhllfANKmQ?view_as=subscriber" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.instagram.com/?hl=ru" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
                     </div>
 
                 </div>
