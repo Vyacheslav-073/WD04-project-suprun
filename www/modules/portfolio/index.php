@@ -2,7 +2,7 @@
 
 $title="Портфолио";
 
-$work=R::find('works','ORDER BY ID DESC');
+$work=R::find('works', 'ORDER BY ID DESC');
 
 ob_start();
 include ROOT. "templates/_parts/_header.tpl";

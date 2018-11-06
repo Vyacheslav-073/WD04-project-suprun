@@ -39,8 +39,8 @@
 				    </div>
 				</div>
 				<div class="post-buttons-navigation">
-                    <a class="button button--icon-left" href="#"><i class="fas fa-arrow-left"></i>Назад</a>
-                    <a class="button button--icon-right button-blog-next" href="#">Вперёд<i class="fas fa-arrow-right"></i></a>
+                    <a class="button button--icon-left" href="<?=HOST?>blog"><i class="fas fa-arrow-left"></i>Назад</a>
+                    <a class="button button--icon-right button-blog-next" href="<?=HOST?>blog/post?id=<?=$post['id']?>">Вперёд<i class="fas fa-arrow-right"></i></a>
                 </div>
 				<?php if (count($comments) > 0) {?>
 				<h2 id='comment'> <?php commentNumber(count($comments));?></h2>

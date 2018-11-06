@@ -96,7 +96,7 @@
                         <?php if ($work['link_work'] !=''){?>
 
                         <h3>Ссылка на проект</h3>
-                        <a href="<?=$work['link_work']?>">
+                        <a href="<?=$work['link_work']?>" target="_blank">
                             <?=$work['link_work']?>
                         </a>
 
@@ -105,7 +105,7 @@
                         <?php if ($work['link_github'] !=''){?>
 
                         <h3>Код на github</h3>
-                        <a href="<?=$work['link_github']?>">
+                        <a href="<?=$work['link_github']?>" target="_blank">
                             <?=$work['link_github']?>
                         </a>
 
@@ -119,7 +119,7 @@
                     <a class="button button--icon-left" href="<?=HOST?>portfolio">
                        <i class="fas fa-arrow-left"></i>Все работы
                     </a>
-                    <a class="button button--icon-right" href="#">Следующая работа
+                    <a class="button button--icon-right" href="<?=HOST?>portfolio/post?id=<?=$work['id']?>">Следующая работа
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>

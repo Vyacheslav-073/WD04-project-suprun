@@ -3,7 +3,7 @@
 
     <div class="hr-line"> </div>
         <div class="container section-page">
-        <div class="title-1">Новые <a href="#">работы</a></div>
+        <div class="title-1">Новые <a href="<?=HOST?>portfolio">работы</a></div>
             <div class="row mb-70">
        
             <?php foreach($work as $work){?>
