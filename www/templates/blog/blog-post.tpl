@@ -39,8 +39,16 @@
 				    </div>
 				</div>
 				<div class="post-buttons-navigation">
-                    <a class="button button--icon-left" href="<?=HOST?>blog"><i class="fas fa-arrow-left"></i>Назад</a>
-                    <a class="button button--icon-right button-blog-next" href="<?=HOST?>blog/post?id=<?=$post['id']?>">Вперёд<i class="fas fa-arrow-right"></i></a>
+                    <?php if ($nextId != ''): ?>
+                    <a class="button button--icon-left" href="<?=HOST?>blog/post?id=<?=$nextId?>">
+                        <i class="fas fa-arrow-left"></i>Назад
+                    </a>
+                    <?php endif ?>
+                    <?php if ($prevId != ''): ?>
+                    <a class="button button--icon-right button-blog-next" href="<?=HOST?>blog/post?id=<?=$prevId?>">
+                        <i class="fas fa-arrow-right"></i>Вперёд
+                    </a>
+                    <?php endif ?>
                 </div>
 				<?php if (count($comments) > 0) {?>
 				<h2 id='comment'> <?php commentNumber(count($comments));?></h2>

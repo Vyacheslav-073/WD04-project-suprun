@@ -13,6 +13,18 @@ $work = $work[0];
 
 $title="Портфолио";
 
+// Кнопка "следующая работа"
+$worksId = R::getCol('SELECT id FROM works');
+
+foreach ($worksId as $index => $id) {
+
+	if ($id == $work['id']) {
+		@$nextId = $worksId[$index - 1];
+
+		break;
+	}
+}
+
 ob_start();
 include ROOT."templates/portfolio/post.tpl";
 $content = ob_get_contents();

@@ -119,9 +119,11 @@
                     <a class="button button--icon-left" href="<?=HOST?>portfolio">
                        <i class="fas fa-arrow-left"></i>Все работы
                     </a>
-                    <a class="button button--icon-right" href="<?=HOST?>portfolio/post?id=<?=$work['id']?>">Следующая работа
+                    <?php if ($nextId != ''): ?>
+                    <a class="button button--icon-right" href="<?=HOST?>portfolio/post?id=<?=$nextId?>">Следующая работа
                         <i class="fas fa-arrow-right"></i>
                     </a>
+                    <?php endif ?>
                 </div>
             </div>
         </div>

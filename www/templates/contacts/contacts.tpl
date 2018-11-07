@@ -155,5 +155,4 @@
             </div>
         </div>
     </div>
-    <div class="map" id="map"></div>
 </div>
