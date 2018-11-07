@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 28 2018 г., 13:37
+-- Время создания: Ноя 07 2018 г., 06:11
 -- Версия сервера: 5.5.58-log
 -- Версия PHP: 5.5.38
 
@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `about` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `description` varchar(255) DEFAULT NULL,
+  `description` text,
   `photo` varchar(191) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -40,7 +40,7 @@ CREATE TABLE `about` (
 --
 
 INSERT INTO `about` (`id`, `name`, `description`, `photo`) VALUES
-(1, 'Вячеслав, Супрун', '<p>Я начинающий веб разработчик из Ростова на Дону.&nbsp; &nbsp;</p>\r\n\r\n<h2>Что я умею</h2>\r\n\r\n<p>Прошёл два курса в школе веб разработки - &quot;Webcademy.ru&quot;.</p>\r\n\r\n<p>Курс по вёрстке и веб разработке.</p>\r\n', '-148496418.jpg');
+(1, 'Вячеслав, Супрун', '<p>Я начинающий веб разработчик из Ростова на Дону.&nbsp; &nbsp;</p>\r\n\r\n<h2>Что я умею</h2>\r\n\r\n<p>Прошёл два курса в школе веб разработки - &quot;Webcademy.ru&quot;.</p>\r\n\r\n<p>Курс по вёрстке и веб разработке. В данном проекте вы найдёте ссылку&nbsp;на мой Git Hub репозиторий, а так же познакомитесь с работами, реализованными в рамках онлайн обучения, в школе &quot;Webcademy.ru&quot;.</p>\r\n', '957502053.jpg');
 
 -- --------------------------------------------------------
 
@@ -62,7 +62,8 @@ INSERT INTO `categories` (`id`, `cat_title`) VALUES
 (11, 'Новости'),
 (12, 'Игры'),
 (13, 'Техника'),
-(14, 'Технологии');
+(14, 'Технологии'),
+(15, 'Веб разработка');
 
 -- --------------------------------------------------------
 
@@ -119,7 +120,7 @@ CREATE TABLE `contacts` (
 --
 
 INSERT INTO `contacts` (`id`, `email`, `phone`, `address`, `name`, `secondname`, `skype`, `vk`, `fb`, `github`, `twitter`) VALUES
-(1, 'info3@mail.com', '+7 800 1273228', 'Канзас', 'Tony ', 'Stark', 'Tony-Stark', 'https://vk.com', 'https://Facebook.com', 'https://github.com/', 'https://Twitter.com');
+(1, 'viacheslav.suprun@yandex.ru', '+7 928 1273228', 'Ростов на Дону', 'Вячеслав', 'Супрун', '+7 928 1273228', 'https://vk.com/id372948519', 'https://Facebook.com', 'https://github.com/Vyacheslav-073', 'https://Twitter.com');
 
 -- --------------------------------------------------------
 
@@ -130,7 +131,7 @@ INSERT INTO `contacts` (`id`, `email`, `phone`, `address`, `name`, `secondname`,
 CREATE TABLE `jobs` (
   `id` int(11) UNSIGNED NOT NULL,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `period` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -139,8 +140,8 @@ CREATE TABLE `jobs` (
 --
 
 INSERT INTO `jobs` (`id`, `title`, `description`, `period`) VALUES
-(2, 'Студент', 'Обучение на курсе веб разработке, в школе он лайн обучения &quot;Webcademy.ru&quot;.', 'Август - ноябрь 2018г.'),
-(3, 'Студент', 'Обучение на курсе - &quot;Верстальщик&quot;, в школе он лайн обучения &quot;Webcademy.ru&quot;.', 'Май - Август 2018г.');
+(6, 'Студент', 'Обучение на курсе &quot;Web-dev&quot;, в школе онлайн обучения &quot;Webcademy.ru&quot;.', 'Август - ноябрь 2018г.'),
+(7, 'Студент', 'Обучение на курсе &quot;Верстальщик&quot;, в школе онлайн обучения &quot;Webcademy.ru&quot;.', 'Май - Август 2018г.');
 
 -- --------------------------------------------------------
 
@@ -164,7 +165,8 @@ CREATE TABLE `messages` (
 
 INSERT INTO `messages` (`id`, `email`, `name`, `message`, `message_file_name_original`, `message_file`, `date_time`) VALUES
 (10, 'info3@mail.com', 'Tony ', 'Hello!!!', 'Post-1.png', '-115407193.png', '2018-10-23 19:26:16'),
-(11, 'info2@mail.com', 'Алёна', 'Привет!!!', 'Post-3.png', '636453545.png', '2018-10-23 19:27:12');
+(11, 'info2@mail.com', 'Алёна', 'Привет!!!', 'Post-3.png', '636453545.png', '2018-10-23 19:27:12'),
+(12, 'vyacheslavsuprun@mail.ru', 'Емельян', 'Hello!!!', NULL, NULL, '2018-11-06 19:37:19');
 
 -- --------------------------------------------------------
 
@@ -249,7 +251,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `role`, `name`, `secondname`, `city`, `country`, `avatar`, `avatar_small`, `recovery_code`, `recovery_code_times`) VALUES
-(19, 'info5@mail.com', '$2y$10$v6Fwcj6exG963KaTTl6c/O2nbOsQtSbYFfu/ihsnAfAI50dkC6oSK', 'admin', 'Вячеслав', 'Супрун', 'Ростов на Дону', 'Россия', '334203038.jpg', '48-334203038.jpg', NULL, NULL),
+(19, 'viacheslav.suprun@yandex.ru', '$2y$10$v6Fwcj6exG963KaTTl6c/O2nbOsQtSbYFfu/ihsnAfAI50dkC6oSK', 'admin', 'Вячеслав', 'Супрун', 'Ростов на Дону', 'Россия', '204040224.jpg', '48-204040224.jpg', NULL, NULL),
 (20, 'info2@mail.com', '$2y$10$pyvOHpduKEIwxVCg1/VBE.0YIM8ipW/QHCoFQwsghMOwkGFcsWgQK', 'user', 'Алёна', 'Иванова', 'Ростов на Дону', 'Россия', '554560677.jpg', '48-554560677.jpg', NULL, NULL),
 (21, 'info3@mail.com', '$2y$10$x/mlQ.N9g3YG3TgyZn8zQeXJ4wEMJ8jnY/gzQC.qLlPVQSp1aRkJO', 'user', 'Tony ', 'Stark', 'Канзас', 'USA', '181862141.jpg', '48-181862141.jpg', NULL, NULL);
 
@@ -280,8 +282,9 @@ CREATE TABLE `works` (
 --
 
 INSERT INTO `works` (`id`, `title`, `date_time`, `link_github`, `link_work`, `result`, `description`, `author_id`, `work_image`, `cat`, `technology`, `date`, `work_image_small`) VALUES
-(2, 'Appolo', '2018-10-28 13:17:30', 'https://github.com/Vyacheslav-073', 'http://winch.zzz.com.ua/Apollo-footer/', 'Работа реализована.', '<p>Верстка лендинга по psd макету.</p>\r\n', '19', '822120867.png', '14', 'Адаптивная верстка.', 1540721850, '320-822120867.png'),
-(3, 'Organic', '2018-10-28 13:27:13', 'https://github.com/Vyacheslav-073', 'http://winch.zzz.com.ua/Apollo-footer/', 'Работа реализована.', '<p>Верстка одностраничника по psd макету.</p>\r\n', '19', '-573556578.png', '14', 'Обычная верска без использования адаптивности.', 1540722433, '320--573556578.png');
+(2, 'Apollo', '2018-11-06 23:45:53', 'https://github.com/Vyacheslav-073/Apollo', 'http://winch.zzz.com.ua/Apollo-footer/', 'Работа реализована.', '<p>Верстка лендинга по psd макету.</p>\r\n', '19', '822120867.png', '15', 'Адаптивная верстка.', 1541537153, '320-822120867.png'),
+(3, 'Organic', '2018-11-06 23:38:09', 'https://github.com/Vyacheslav-073/Organic', 'http://winch.zzz.com.ua/Organic-2/', 'Работа реализована.', '<p>Верстка одностраничника по psd макету.</p>\r\n', '19', '-573556578.png', '14', 'Обычная верска без использования адаптивности.', 1541536689, '320--573556578.png'),
+(4, 'Портфолио', '2018-11-06 23:21:45', 'https://github.com/Vyacheslav-073/portfolio', 'http://winch.zzz.com.ua/personal/', 'Работа реализована.', '<p>Это мой первый сайт портфолио, сверстанный за время прохождения курса - &quot;Верстальщик&quot; в школе онлайн обучения &quot;Webcademy.ru&quot;.</p>\r\n', '19', '937992456.png', '14', 'CSS, HTML, JS, PHP.', 1541535705, '320-937992456.png');
 
 --
 -- Индексы сохранённых таблиц
@@ -364,7 +367,7 @@ ALTER TABLE `about`
 -- AUTO_INCREMENT для таблицы `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT для таблицы `comments`
@@ -382,13 +385,13 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT для таблицы `jobs`
 --
 ALTER TABLE `jobs`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT для таблицы `posts`
@@ -412,7 +415,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `works`
 --
 ALTER TABLE `works`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
