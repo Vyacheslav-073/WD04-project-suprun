@@ -73,27 +73,26 @@ function rus_date() {
 		"rd" => "е",
 		"th" => "ое"
 
-    );
+	);
 
-    // если передали дату, то переводим ее 
-    if (func_num_args() > 1) {
+	// если передали дату, то переводим ее
+	if (func_num_args() > 1) {
 
-        $timestamp = func_get_arg(1);
-        return strtr(date(func_get_arg(0), $timestamp), $translate); 
-
-    } else { 
-        // иначе текущую дату
-        return strtr(date(func_get_arg(0)), $translate); 
-    } 
+		$timestamp = func_get_arg(1);
+		return strtr(date(func_get_arg(0), $timestamp), $translate);
+	} else {
+		// иначе текущую дату
+		return strtr(date(func_get_arg(0)), $translate);
+	}
 }
 
 function commentNumber ($num) {
 
-    //Оставляем две последние цифры от $num
+	//Оставляем две последние цифры от $num
 	$number = substr($num, -2);
 
-    //Если 2 последние цифры входят в диапазон от 11 до 14
-    //Тогда подставляем окончание "ЕВ" 
+	//Если 2 последние цифры входят в диапазон от 11 до 14
+	//Тогда подставляем окончание "ЕВ" 
 	if($number > 10 and $number < 15)
 
 	{
@@ -102,7 +101,7 @@ function commentNumber ($num) {
 
 	else
 
-	{ 
+	{
 		$number = substr($number, -1);
 
 		if($number == 0) {$term = "ев";}
@@ -120,15 +119,15 @@ function adopt($text) {
 
 // Обрезаем заголовок поста
 function mbCutString($string, $length, $postfix = '...', $encoding = 'UTF-8') {
-           
-    if ( mb_strlen($string, $encoding) <= $length ) {
-        return $string;
-    }
-            
-    $temp = mb_substr($string, 0, $length, $encoding);
-    $spacePosition = mb_strripos($temp, " ", 0, $encoding);
-    $result = mb_substr($temp, 0, $spacePosition, $encoding) . "...";
-    return $result;
+
+	if ( mb_strlen($string, $encoding) <= $length ) {
+		return $string;
+	}
+
+	$temp = mb_substr($string, 0, $length, $encoding);
+	$spacePosition = mb_strripos($temp, " ", 0, $encoding);
+	$result = mb_substr($temp, 0, $spacePosition, $encoding) . "...";
+	return $result;
 }
 
 ?>

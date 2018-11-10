@@ -13,10 +13,10 @@
                             <input class="input" name="catTitle" type="text" placeholder="Введите название" />
                         </label>
                     </div>
-                
+
                     <input type="submit" name="catNew" class="button button--save mr-20" value="Сохранить">
                     <a class="button" href="<?=HOST?>blog/categories">Отмена</a>
-                </form>    
+                </form>
             </div>
         </div>
     </div>

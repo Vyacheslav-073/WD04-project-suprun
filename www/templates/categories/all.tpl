@@ -1,6 +1,6 @@
-<div class="content">    
+<div class="content">
     <div class="container user-content section-page">
-       
+
 <?php
 
     if( isset($_GET['result']) ){
@@ -8,13 +8,13 @@
 
     }
 ?>
-       
+
         <div class="row justify-content-between align-items-center pl-15 pr-15 mb-35">
             <div class="title-1">Категории блога</div>
             <a class="button button--edit" href="<?=HOST?>blog/category-new">Добавить категорию</a>
         </div>
-        
-        <div class="row">        
+
+        <div class="row">
             <table class="table">
                 <thead class="thead-light">
 				    <tr>
@@ -36,6 +36,6 @@
                 </tbody>
             </table>
         </div>
-                
+
     </div>
 </div>

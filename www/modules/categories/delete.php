@@ -11,10 +11,10 @@ $cat = R::load('categories', $_GET['id']);
 
 if( isset($_POST['catDelete']) ) {
 
-    R::trash($cat);
+	R::trash($cat);
 
-    header("Location: " . HOST . "blog/categories?result = catDeleted");
-    exit();
+	header("Location: " . HOST . "blog/categories?result = catDeleted");
+	exit();
 }
 
 ob_start();

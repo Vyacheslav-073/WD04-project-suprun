@@ -58,7 +58,7 @@ if( isset($_POST['newWork']) ) {
 			}
 
 			if($fileSize>4194304){				
-				$errors[] = ['title' => 'Файл изображения не должен бфть более 4 Mb'];				
+				$errors[] = ['title' => 'Файл изображения не должен бфть более 4 Mb'];
 			}
 
 			if( !preg_match("/\.(gif|jpg|jpeg|png)$/i",$fileName)) {

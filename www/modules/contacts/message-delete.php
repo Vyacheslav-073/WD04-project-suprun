@@ -16,13 +16,13 @@ if(isset($_POST['messageDelete'])){
 
     if($messageImage !=''){
         $picurl=$postImageFolderLocation .$messageImage;
-            
-        if(file_exists($picurl)){unlink($picurl);}		
+
+        if(file_exists($picurl)){unlink($picurl);}
 			
     }
 
         R::trash($message);
-    
+
     header("Location:".HOST."messages?result=messageDelete");
     exit();
 }

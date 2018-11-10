@@ -2,7 +2,7 @@
 	function dataFromPost($filedName){
 		global $about;
 		echo @$_POST[$filedName] !=''? @$_POST[$filedName]: $about[$filedName];
-	}			
+	}
 ?>
 
 <div class="content">
@@ -10,9 +10,9 @@
         <div class="row">
             <form class="col-md-10 offset-md-1" action="edit-text" method="POST" enctype="multipart/form-data">
                 <h1>Редактировать - о авторе</h1>
-                
+
                 <?php require ROOT . "templates/_parts/_errors.tpl"?>
-                
+
                 <div class="form-group">
                     <label class="label">Имя, фамилия
                         <input class="input" name="name" type="text" placeholder="Введите имя и фамилию" value="<?php dataFromPost('name')?>" />

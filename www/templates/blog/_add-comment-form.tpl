@@ -1,6 +1,7 @@
-<!-- Добавление комментария -->                    
-<?php if ( isLoggedIn() ) { ?>                                                                                
-    <form class="comment-add-block" id="commentForm" method="POST" action="<?=HOST?>blog/post?id=<?=$post['id']?>">                    
+<!-- Добавление комментария -->
+<?php if ( isLoggedIn() ) { ?>
+    <form class="comment-add-block" id="commentForm" method="POST" action="<?=HOST?>blog/post?id=<?=$post['id']?>">
+
         <div class="comment-add-block__left">
             <div class="avatar avatar--small">
 				<?php if ( $_SESSION['logged_user']['avatar_small'] != "" ) { ?>
@@ -20,7 +21,7 @@
             <input type="submit" class="button" name="addComment" value="Опубликовать" data-add-comment >
         </div>
     </form>
-                        
+
     <?php } else { ?>
         <!-- Секция "Комментарий - Зарегистрироваться"-->
             <div class="comment-register">

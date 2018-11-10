@@ -19,15 +19,15 @@ if( isset($_POST['textUpdate'])) {
 		$errors[]=['title' => 'Введите описание'];
 	}
 	
-	if( empty($errors)) { 
+	if( empty($errors)) {
 
 		$about->name = htmlentities($_POST['name']);
 		$about->description = $_POST['description'];
 
-        if( isset($_FILES['photo']['name']) && $_FILES['photo']['tmp_name'] !='') {
+		if( isset($_FILES['photo']['name']) && $_FILES['photo']['tmp_name'] !='') {
 
-            $fileName = $_FILES['photo']['name'];
-            $fileTmpLoc = $_FILES['photo']['tmp_name'];
+			$fileName = $_FILES['photo']['name'];
+			$fileTmpLoc = $_FILES['photo']['tmp_name'];
 			$fileSize = $_FILES['photo']['size'];
 			$fileType = $_FILES['photo']['type'];
 			$fileErrorMsg = $_FILES['photo']['error'];
@@ -48,8 +48,8 @@ if( isset($_POST['textUpdate'])) {
 
 				$errors[] = ['title' => 'Неверный формат файла',
 						'desc' => '<p>Файл изображения долен быть в формате gif, jpg, png или jpeg</p>'
-				    ];
-		        }
+					];
+				}
 					
 			if( $fileErrorMsg == 1) {
 				$errors[] = ['title' => 'При загрузке изображения произошла ошибка.'];
@@ -74,8 +74,8 @@ if( isset($_POST['textUpdate'])) {
 			$img = createThumbnail($target_file,$wmax,$hmax);
 			$img->writeImage($target_file);
 			
-			$about->photo = $db_file_name;			
-									
+			$about->photo = $db_file_name;
+
 		}
 
 		R::store($about);

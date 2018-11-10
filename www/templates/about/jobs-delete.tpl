@@ -6,7 +6,7 @@
                 <h1>Удалить описание места работы </h1>
 
                 <div class="user-message mb-20">
-                    
+
                     <div class="user-message__top">
                         <div class="user-message__date">
                             <?=$job->period?>
@@ -18,7 +18,7 @@
                             <?=$job->title?>
                         </div>
                     </div>
-                    
+
                     <div class="user-message__text">
                         <?=$job->description?>
                     </div>
@@ -27,7 +27,7 @@
 
                 <input type="submit" value="Удалить" class="button button--removesmall" name="jobDelete">
                 <a href="<?=HOST?>about" class="button ">Отмена</a>
-                
+
             </form>
         </div>
     </div>

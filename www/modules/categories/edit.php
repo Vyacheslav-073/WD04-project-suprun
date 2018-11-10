@@ -13,7 +13,7 @@ if(isset($_POST['catEdit'])){
 
 		if(trim($_POST['catTitle'])==''){
 
-            $errors[]=['title'=>'Введите Название категории'];
+			$errors[]=['title'=>'Введите Название категории'];
 	}
 
 	if(empty($errors)){

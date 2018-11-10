@@ -48,9 +48,9 @@
                        
                         <p class="mb-0 mt-0">Категория</p>
                         
-				        <select name="postCat" id="">				
+				        <select name="postCat" id="">
 				            <?PHP foreach ($cats as $cat){?>
-							<option value="<?=$cat['id']?>"><?=$cat['cat_title']?></option>							
+							<option value="<?=$cat['id']?>"><?=$cat['cat_title']?></option>
 				            <?PHP }?>
 				        </select>
 

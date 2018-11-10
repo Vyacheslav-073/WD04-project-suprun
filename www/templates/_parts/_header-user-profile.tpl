@@ -1,6 +1,6 @@
-<div class="header-right__col">  
+<div class="header-right__col">
     <div class="avatar avatar--small">
-       
+
         <?php if ($_SESSION['logged_user']['avatar_small'] !='') {?>
             <img src="<?=HOST?>usercontent/avatar/<?=$_SESSION['logged_user']['avatar_small']?>" alt="<?=$_SESSION['logged_user']['name']?><?=$_SESSION['logged_user']['secondname']?>" />
         <?php } else {?>
@@ -8,7 +8,7 @@
         <?php }?>
 
         <img src="<?=HOST?>usercontent/avatar/<?=$_SESSION['logged_user']['avatar_small']?>" alt="avatar" />
-        
+
     </div>
 
     <div class="header-user">

@@ -1,13 +1,13 @@
 <div class="content">
     <div class="container user-content section-page">
-        
+
         <?php if ( isAdmin() ) { ?>
         <div class="row justify-content-end">
             <a class="button button--edit mr-20" href="<?=HOST?>contacts-edit">Редактировать</a>
             <a class="button" href="<?=HOST?>messages">Сообщения</a>
         </div>
         <?php } ?>
-        
+
         <div class="row">
             <div class="col-md-5">
 				<div class="contacts__title title-1">Контакты</div>
@@ -79,25 +79,25 @@
 				        <h6 class="contacts__item-name">Социальные сети</h6>
 				    </div>
 				    <div class="col-md-7">
-                   
+
                     <?php if ( @$contacts['vk'] != "") { ?>
 				        <div class="contacts__item-social mb-15">
 				            <a href="<?=$contacts['vk']?>" target="_blank">Профиль Вконтакте</a>
 				        </div>
 				    <?php } ?>
-				    
+
 				    <?php if ( @$contacts['fb'] != "") { ?>
 				        <div class="contacts__item-social mb-15">
 				            <a href="<?=$contacts['fb']?>" target="_blank">Профиль Facebook</a>
 				        </div>
 				    <?php } ?>
-				    
+
 				    <?php if ( @$contacts['twitter'] != "") { ?>
 				        <div class="contacts__item-social mb-15">
 				            <a href="<?=$contacts['twitter']?>" target="_blank">Профиль Twitter</a>
 				        </div>
 				    <?php } ?>
-				    
+
 				    </div>
 				</div>
 				<div class="row align-items-start mb-15">

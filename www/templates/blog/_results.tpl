@@ -2,7 +2,7 @@
 
 	<div class="notify no-radius-bottom notify--error mt-10 " data-notify-hide>
 		Пост успешно удален!
-	</div>	
+	</div>
 
 <?php } ?>
 
@@ -10,7 +10,7 @@
 
 	<div class="notify no-radius-bottom notify--success mt-10 success-error" data-notify-hide>
 		Новый пост добавлен!
-	</div>	
+	</div>
 
 <?php } ?>
 
@@ -18,6 +18,6 @@
 
 	<div class="notify no-radius-bottom notify--success mt-10 success-error" data-notify-hide>
 		Пост успешно отредактирован!
-	</div>	
+	</div>
 
-<?php } ?>   
+<?php } ?>

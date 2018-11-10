@@ -8,11 +8,11 @@ if (!isAdmin()){
 $title = "Создать новую категорию";
 
 if ( isset($_POST['catNew']) ) {
-    
+
     if ( trim($_POST['catTitle'] == '') ) {
         $errors[] = ['Title' => 'Введите название категории'];
     }
-    
+
     if ( empty($errors) ) {
         $cat = R::dispense('categories');
         $cat->cat_title = htmlentities($_POST['catTitle']);
@@ -25,7 +25,7 @@ if ( isset($_POST['catNew']) ) {
 // Готовим контент для центральной части
 ob_start();
 include ROOT . "templates/_parts/_header.tpl";
-include ROOT . "templates/categories/new.tpl"; 
+include ROOT . "templates/categories/new.tpl";
 $content = ob_get_contents();
 ob_end_clean();
 

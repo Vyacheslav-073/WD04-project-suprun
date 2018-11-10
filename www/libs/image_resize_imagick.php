@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function createThumbnail($imagePath, $cropWidth = 100, $cropHeight = 100){
 
@@ -16,13 +16,13 @@ function createThumbnail($imagePath, $cropWidth = 100, $cropHeight = 100){
 	$centreX = round($width / 2); // 300
 	$centreY = round($height / 2); // 150
 
-	// Определяем точку для обрезки по центру 
+	// Определяем точку для обрезки по центру
 	$cropWidthHalf  = round($cropWidth / 2);
 	$cropHeightHalf = round($cropHeight / 2);
 
 	// Координаты для старта отбрезки
 	$startX = max(0, $centreX - $cropWidthHalf);
-	$startY = max(0, $centreY - $cropHeightHalf);    
+	$startY = max(0, $centreY - $cropHeightHalf);
 	$imagick->cropImage($cropWidth, $cropHeight, $startX, $startY);
 
 	// Возвращаем готовое изображение
@@ -31,26 +31,26 @@ function createThumbnail($imagePath, $cropWidth = 100, $cropHeight = 100){
 
 	function createThumbnailCrop ($imagePath, $cropWidth, $cropHeight){
 
-        // чтение изображения
-        $imagick = new Imagick($imagePath);
-        $width = $imagick->getImageWidth();
-        $height = $imagick->getImageHeight();
-        $imagick->cropThumbnailImage($cropWidth, $cropHeight);
-        return $imagick;
-        $imagick->destroy();
+		// чтение изображения
+		$imagick = new Imagick($imagePath);
+		$width = $imagick->getImageWidth();
+		$height = $imagick->getImageHeight();
+		$imagick->cropThumbnailImage($cropWidth, $cropHeight);
+		return $imagick;
+		$imagick->destroy();
 
 	}
 
-    function createThumbnailBig($imagePath, $cropWidth, $cropHeight){
+	function createThumbnailBig($imagePath, $cropWidth, $cropHeight){
 
-        // чтение изображения
+		// чтение изображения
 		$imagick = new Imagick($imagePath);
 		$width = $imagick->getImageWidth();
 		$height = $imagick->getImageHeight();
 
-        if($width > $height){
+		if($width > $height){
 
-	       // для широких картинок
+			// для широких картинок
 			$imagick->thumbnailImage( $cropWidth, 0);
 
 		}else{
@@ -58,7 +58,7 @@ function createThumbnail($imagePath, $cropWidth = 100, $cropHeight = 100){
 		}
 
 		return $imagick;
-		$imagick->destroy();									
-    }
+		$imagick->destroy();
+	}
 
 ?>

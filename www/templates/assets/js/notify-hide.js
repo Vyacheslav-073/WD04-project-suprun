@@ -7,18 +7,18 @@ $(document).ready(function(){
 	$('[data-notify-hide]').dblclick(function(){
 		$(this).slideUp(400)
 	});
-    
+
     $('input[data-add-comment]').on('click', function(e){
         e.preventDefault();
         comment = $('.comment-add-block__right').children('.textarea');
-        
+
         if ( comment.val() == '' ) {
-            
+
         $('.notify--error').removeClass('hide');
         comment.focus(function(event) {
             $('.notify--error').addClass('hide');
         });
-            
+
         } else{
             $('#commentForm').submit();
         }

@@ -5,7 +5,7 @@
         echo @$_POST[$fieldName] != '' ? @$_POST[$fieldName] : $contacts[$fieldName];
     }
 
-?> 
+?>
 <div class="content">
     <div class="container contacts-edit section-page">
         <form action="<?=HOST?>contacts-edit" method="POST" class="contacts-edit-block user-content">
@@ -15,11 +15,11 @@
 				    <div class="col-md-3">
 				        <div class="form-group">
 				            <label class="label">Имя
-				                <input class="input" 
+				                <input class="input"
 				                    name="name" 
 				                    type="text" 
 				                    placeholder="Введите имя" 
-				                    value="<?php dataFromPost('name') ?>" 
+				                    value="<?php dataFromPost('name') ?>"
 				                />
 				            </label>
 				        </div>
@@ -38,21 +38,21 @@
 				    <div class="col-md-3">
 				        <div class="form-group">
 				            <label class="label">Email
-				                <input class="input" 
-				                    name="email" 
-				                    type="text" 
-				                    placeholder="Введите email" 
-				                    value="<?php dataFromPost('email') ?>" 
+				                <input class="input"
+				                    name="email"
+				                    type="text"
+				                    placeholder="Введите email"
+				                    value="<?php dataFromPost('email') ?>"
 				                />
 				            </label>
 				        </div>
 				        <div class="form-group">
 				            <label class="label">Skype
-				                <input class="input" 
-				                    name="skype" 
-				                    type="text" 
+				                <input class="input"
+				                    name="skype"
+				                    type="text"
 				                    placeholder="Введите skype" 
-				                    value="<?php dataFromPost('skype') ?>" 
+				                    value="<?php dataFromPost('skype') ?>"
 				                />
 				            </label>
 				        </div>
@@ -62,11 +62,11 @@
 				    <div class="col-md-3">
 				        <div class="form-group">
 				            <label class="label">Вконтакте
-				                <input class="input" 
-				                    name="vk" 
-				                    type="text" 
-				                    placeholder="Введите ссылку на профиль" 
-				                    value="<?php dataFromPost('vk') ?>"  
+				                <input class="input"
+				                    name="vk"
+				                    type="text"
+				                    placeholder="Введите ссылку на профиль"
+				                    value="<?php dataFromPost('vk') ?>"
 				                />
 				            </label>
 				        </div>
@@ -74,11 +74,11 @@
 				    <div class="col-md-3">
 				        <div class="form-group">
 				            <label class="label">Facebook
-				                <input class="input" 
-				                    name="fb" 
-				                    type="text" 
-				                    placeholder="Введите ссылку на профиль" 
-				                    value="<?php dataFromPost('fb') ?>"  
+				                <input class="input"
+				                    name="fb"
+				                    type="text"
+				                    placeholder="Введите ссылку на профиль"
+				                    value="<?php dataFromPost('fb') ?>"
 				                />
 				            </label>
 				        </div>
@@ -86,11 +86,11 @@
 				    <div class="col-md-3">
 				        <div class="form-group">
 				            <label class="label">GitHub
-				                <input class="input" 
-				                    name="github" 
-				                    type="text" 
+				                <input class="input"
+				                    name="github"
+				                    type="text"
 				                    placeholder="Введите ссылку на профиль"
-				                    value="<?php dataFromPost('github') ?>"   
+				                    value="<?php dataFromPost('github') ?>"
 				                />
 				            </label>
 				        </div>
@@ -98,11 +98,11 @@
 				    <div class="col-md-3">
 				        <div class="form-group">
 				            <label class="label">Twitter
-				                <input class="input" 
-				                    name="twitter" 
-				                    type="text" 
+				                <input class="input"
+				                    name="twitter"
+				                    type="text"
 				                    placeholder="Введите ссылку на профиль"
-				                    value="<?php dataFromPost('twitter') ?>" 
+				                    value="<?php dataFromPost('twitter') ?>"
 				                />
 				            </label>
 				        </div>
@@ -110,11 +110,11 @@
 				    <div class="col-md-3">
 				        <div class="form-group">
 				            <label class="label">Телефон
-				                <input class="input" 
-				                    name="phone" 
-				                    type="text" 
+				                <input class="input"
+				                    name="phone"
+				                    type="text"
 				                    placeholder="Введите телефон"
-				                    value="<?php dataFromPost('phone') ?>" 
+				                    value="<?php dataFromPost('phone') ?>"
 				                />
 				            </label>
 				        </div>
@@ -122,11 +122,11 @@
 				    <div class="col-md-3">
 				        <div class="form-group">
 				            <label class="label">Адрес
-				                <input class="input" 
-				                    name="address" 
-				                    type="text" 
+				                <input class="input"
+				                    name="address"
+				                    type="text"
 				                    placeholder="Введите адрес"
-				                    value="<?php dataFromPost('address') ?>"  
+				                    value="<?php dataFromPost('address') ?>"
 				                />
 				            </label>
 				        </div>
@@ -135,7 +135,7 @@
                 <div class="contacts-edit-btn">
                     <input type="submit" name="contactsUpdate" class="button button--save mr-20" value="Сохранить"/>
                     <a class="button" href="<?=HOST?>contacts">Отмена</a>
-                </div>    
-        </form>        
+                </div>
+        </form>
     </div>
 </div>

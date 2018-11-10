@@ -18,8 +18,8 @@ if( isset($_POST['newJob']) ) {
 	if( trim($_POST['description']) =='' ) {
 		$errors[]=['title'=>'Введите описание'];
 	}
-    
-    if( trim($_POST['title']) =='' ) {
+
+	if( trim($_POST['title']) =='' ) {
 		$errors[]=['title'=>'Введите место работы'];
 	}
 

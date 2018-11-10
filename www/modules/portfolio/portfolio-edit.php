@@ -28,7 +28,7 @@ if(isset($_POST['editWork'])){
 		$errors[]=['title'=>'Напишити какие технологии вы использовали'];
 	}
 
-	if(empty($errors)){ 
+	if(empty($errors)){
 		
 		$work->title=htmlentities($_POST['title']);
 		$work->description=$_POST['description'];
@@ -40,9 +40,9 @@ if(isset($_POST['editWork'])){
 		$work->date=time();
 		$work->authorID=$_SESSION['logged_user']['id'];
 		$work->dateTime=R::isoDateTime();
-		
+
 			if(isset($_FILES['postImage']['name']) && $_FILES['postImage']['tmp_name'] !=''){
-			
+
 			$fileName=$_FILES['postImage']['name'];
 			$fileTmpLoc=$_FILES['postImage']['tmp_name'];
 			$fileSize=$_FILES['postImage']['size'];
@@ -50,7 +50,7 @@ if(isset($_POST['editWork'])){
 			$fileErrorMsg=$_FILES['postImage']['error'];
 			$kaboom=explode(".",$fileName);
 			$fileExt=end($kaboom);
-			 
+
 			list($width, $height) = getimagesize($fileTmpLoc);
 			
 			if($width<10 || $height<10){
@@ -58,15 +58,15 @@ if(isset($_POST['editWork'])){
 			}
 
 			if($fileSize>4194304){				
-				$errors[]=['title'=>'Файл изображения не должен бфть более 4 Mb'];				
+				$errors[]=['title'=>'Файл изображения не должен бфть более 4 Mb'];
 			}
 			
 			if(!preg_match("/\.(gif|jpg|jpeg|png)$/i",$fileName)){
 
 				$errors[]=['title'=>'Неверный формат файла',
 						'desc'=>'<p>Файл изображения долен быть в формате gif, jpg, png или jpeg</p>'
-				    ];
-		        }		
+					];
+				}
 			
 			if( $fileErrorMsg==1){
 				$errors[]=['title'=>'При загрузке изображения произошла ошибка. Повторите попытку'];
@@ -80,7 +80,7 @@ if(isset($_POST['editWork'])){
 			if($moveResult!=true){
 				$errors[]=['title'=>'Ошибка загрузки файла. Повторите попытку'];
 			}
-			 
+
 			include_once(ROOT."/libs/image_resize_imagick.php");
 
 			$target_file=$postImageFolderLocation.$db_file_name;
@@ -88,7 +88,7 @@ if(isset($_POST['editWork'])){
 			$hmax=620;
 			$img=createThumbnailBig($target_file,$wmax,$hmax);
 			$img->writeImage($target_file);
-			
+
 			$work->workImage=$db_file_name;
 
 			$target_file=$postImageFolderLocation.$db_file_name;
@@ -97,7 +97,7 @@ if(isset($_POST['editWork'])){
 			$hmax=140;
 			$img=createThumbnailCrop($target_file,$wmax,$hmax);
 			$img->writeImage($resized_file);
-			
+
 			$work->workImageSmall  ='320-' . $db_file_name;
 		}
 

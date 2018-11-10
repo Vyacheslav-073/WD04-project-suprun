@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $recoveryCode = false;
 $newPasswordReady = false;
@@ -30,7 +30,7 @@ if ( !empty($_GET['email']) ) {
 
 	} else {
 		echo "Пользователь с таким email не найден";
-		die; 
+		die;
 	}
 
 	} else if ( isset($_POST['set-new-password']) ) {
@@ -70,8 +70,8 @@ if ( !empty($_GET['email']) ) {
 
 // Готовим контент для центральной части
 ob_start();
-    include ROOT . 'templates/login/form-set-new-password.tpl';
-    $content = ob_get_contents();
+	include ROOT . 'templates/login/form-set-new-password.tpl';
+	$content = ob_get_contents();
 ob_end_clean();
 
 include ROOT . 'templates/_parts/_head.tpl';

@@ -12,7 +12,7 @@
 
             <div class="col-md-9">
                 <div class="about-me__title-container justify-content-between">
-                   
+
                     <div class="title-1 about-me__title-container-item">
                         <?=$about->name?>
                     </div>
@@ -28,7 +28,7 @@
                 <div class="about-me__description about-text mt-20">
                         <?=$about->description?>
                 </div>
-                
+
             </div>
         </div>
     </div>

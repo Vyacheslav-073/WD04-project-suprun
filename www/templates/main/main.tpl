@@ -1,13 +1,12 @@
-
 <?php include(ROOT . 'templates/about/_about-text.tpl');?>
 
     <div class="hr-line"> </div>
         <div class="container section-page">
         <div class="title-1">Новые <a href="<?=HOST?>portfolio">работы</a></div>
             <div class="row mb-70">
-       
+
             <?php foreach($work as $work){?>
-        
+
                 <div class="col-md-4 mb-40" >
                     <div class="card card--portfolio">
 
@@ -16,7 +15,7 @@
                         </div>
 
                         <div class="card__desc pl-20 pr-20">
-				            <div class="card__title"><?=$work->title?></div>                        
+				            <div class="card__title"><?=$work->title?></div>
                             <a class="button" href="<?=HOST?>portfolio/post?id=<?=$work->id?>">Смотреть кейс</a>
                         </div>
 
@@ -27,13 +26,13 @@
 
                 </div>
 
-                <div class="title-1">Новые записи в 
+                <div class="title-1">Новые записи в
                     <a href="<?=HOST?>blog">блоге</a>
                 </div>
 
                 <div class="row">
                     <?php foreach ($post as $post){?>
-                    <?php include ROOT . "templates/_parts/_blog-card.tpl"?>					     
+                    <?php include ROOT . "templates/_parts/_blog-card.tpl"?>
                     <?php }?>
-                </div>    
-        </div>	
+                </div>
+        </div>

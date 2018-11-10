@@ -11,14 +11,14 @@
                 <div class="user-message__header">
 
                 <?php if ($message->name !=''){?>
-                    <div class="user-message__name"><?=$message->name?></div>					
+                    <div class="user-message__name"><?=$message->name?></div>
                 <?php }?>
 
                     <a class="user-message__link" href="mailto:<?=$message->email?>" target="_blank"><?=$message->email?></a>
 
                 </div>
-							
-	            <?php if ($message->message !=''){?>	
+
+	            <?php if ($message->message !=''){?>
 	                <div class="user-message__text">
 		                <p>
 		                <?=$message->message?>
@@ -34,7 +34,7 @@
 	            <?php }?>
 
             </div>
-						
+
 		    <input type="submit" value="Удалить" class="button button--remove mt-15 mr-20" name='messageDelete'>
 
             <a href="<?=HOST?>messages" class="button mt-15">Отмена</a>

@@ -12,7 +12,7 @@
                             <input class="input" name="postTitle" type="text" placeholder="Введите название" value="<?=$post['title']?>" />
                         </label>
                     </div>
-                    
+
                     <div class="form-group">
                         <label class="label">Категория
                             <select name="postCat">
@@ -26,17 +26,17 @@
                             </select>
                         </label>
                     </div>
-                
+
                     <div class="blog-edit__container"><b>Изображение</b>
                         <p class="mb-10"> Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.</p>
                     </div>
-                
+
                     <div class="blog-edit__fileUp">
                         <input class="inputfile" type="file" name="postImg" id="file" />
                         <label class="label-input-file" for="file">Выбрать файл</label>
                         <span>Файл не выбран</span>
                     </div>
-                		
+
                     <?php if ( $post['post_img_small'] != "" ) { ?>
                     <div class="section-ui">
 				        <div class="formInput-image">
@@ -48,18 +48,18 @@
                     </div>
                     <input id="deleteImg" type="checkbox" name="deleteImg" value="yes">
 				    <?php } ?>
-                
+
                     <div class="form-group">
                         <label class="label">Содержание
                             <textarea id="ckEditor" class="textarea" name="postText" type="type" placeholder="Введите текст поста"><?=$post['text']?></textarea>
                             <?php include_once ROOT . "templates/_parts/_ckEditorConnect.tpl" ?>
                         </label>
                     </div>
-                
+
                     <input type="submit" name="postUpdate" class="button button--save mr-20" value="Сохранить">
                     <a class="button" href="<?=HOST?>blog">Отмена</a>
-                </form>    
+                </form>
             </div>
         </div>
-    </div>    
+    </div>
 </div>

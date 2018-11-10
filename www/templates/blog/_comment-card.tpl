@@ -3,7 +3,7 @@
         <div class="avatar avatar--small">
         <?php
             if( $comment['avatar_small'] !=''){?>
-				<img src="<?=HOST?>usercontent/avatar/<?=$comment['avatar_small']?>" alt='<?=$comment["name"]?> <?=$comment["secondname"]?>'/>
+				<img src="<?=HOST?>usercontent/avatar/<?=$comment['avatar_small']?>" alt='<?=$comment["name"]?><?=$comment["secondname"]?>'/>
 				<?php }?>
         </div>
     </div>

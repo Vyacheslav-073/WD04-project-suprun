@@ -58,109 +58,109 @@ switch ( $uri[0]) {
         break;
 
 //::::::::::::::: / USERS :::::::::::::::::::::
-        
+
 //::::::::::::::: ABOUT :::::::::::::::::::::
 
     case 'about':
         include ROOT . "modules/about/index.php";
         break;
-        
+
     case 'edit-text':
         include ROOT . "modules/about/edit-text.php";
         break;
-        
+
     case 'edit-skills':
         include ROOT . "modules/about/edit-skills.php";
         break;
-        
+
     case 'edit-jobs':
         include ROOT . "modules/about/edit-jobs.php";
         break;
-        
+
     case 'about/jobs-delete':
         include ROOT . "modules/about/jobs-delete.php";
         break;
-        
+
 //::::::::::::::: / ABOUT :::::::::::::::::::::
 
-//::::::::::::::: Categories ::::::::::::::::::::: 
-        
+//::::::::::::::: Categories :::::::::::::::::::::
+
     case 'blog/categories':
         include ROOT . "modules/categories/all.php";
         break;
-        
+
     case 'blog/category-new':
         include ROOT . "modules/categories/new.php";
         break;
-        
+
     case 'blog/category-edit':
         include ROOT . "modules/categories/edit.php";
         break;
-        
+
     case 'blog/category-delete':
         include ROOT . "modules/categories/delete.php";
         break;
-                    
-//::::::::::::::: / Categories :::::::::::::::::::::        
-        
+
+//::::::::::::::: / Categories :::::::::::::::::::::
+
 //::::::::::::::: BLOG :::::::::::::::::::::::::
 
     case 'blog':
         include ROOT . "modules/blog/index.php";
         break;
-        
+
     case 'blog/post-new':
         include ROOT . "modules/blog/post-new.php";
         break;
-        
+
     case 'blog/post-edit':
         include ROOT . "modules/blog/post-edit.php";
         break;
-        
+
     case 'blog/post-delete':
         include ROOT . "modules/blog/post-delete.php";
         break;
-        
+
     case 'blog/post':
         include ROOT . "modules/blog/post.php";
         break;
-        
+
 //:::::::::::::: / BLOG ::::::::::::::::::::::::
         
 //:::::::::::::: CONTACTS ::::::::::::::::::::::::
-        
+
     case 'contacts':
         include ROOT . "modules/contacts/index.php";
         break;
-        
+
     case 'contacts-edit':
         include ROOT . "modules/contacts/edit.php";
         break;
-        
+
     case 'messages':
         include ROOT . "modules/contacts/messages.php";
         break;
-        
+
     case 'contacts/message-delete':
         include ROOT . "modules/contacts/message-delete.php";
         break;
-        
+
 //:::::::::::::: / CONTACTS ::::::::::::::::::::::::
-        
+
 //:::::::::::::: PORTFOLIO ::::::::::::::::::::::::
-        
+
     case 'portfolio':
         include ROOT."modules/portfolio/index.php";
-        break;	
+        break;
 
     case 'portfolio/portfolio-new':
         include ROOT."modules/portfolio/portfolio-new.php";
-        break;	 
+        break;
 
     case 'portfolio/portfolio-edit':
         include ROOT."modules/portfolio/portfolio-edit.php";
-        break;	 
-		 
+        break;
+
     case 'portfolio/post':
         include ROOT."modules/portfolio/post.php";
         break;
@@ -168,12 +168,12 @@ switch ( $uri[0]) {
 	case 'portfolio/portfolio-delete':
         include ROOT."modules/portfolio/portfolio-delete.php";
         break;
-        
+
 //:::::::::::::: // PORTFOLIO ::::::::::::::::::::::::
 
     default:
         include "modules/main/index.php";
         break;
-}       
+}
 
 ?>

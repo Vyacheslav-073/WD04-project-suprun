@@ -18,7 +18,7 @@ if ( isset($_POST['skillsUpdate']) ) {
 		}
 	}
 
-if ( empty($errors) ) { 
+if ( empty($errors) ) {
 	
 	$skills->html=htmlentities($_POST['html']);
 	$skills->css=htmlentities($_POST['css']);
@@ -35,8 +35,8 @@ if ( empty($errors) ) {
 
 	header("Location:" .HOST."about");
 	exit();
-    
-    }
+
+	}
 }
 
 // Готовим контент для центральной части

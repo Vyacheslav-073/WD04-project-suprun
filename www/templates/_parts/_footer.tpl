@@ -1,13 +1,13 @@
 <div class="wrap-bottom">
-   
+
     <footer>
         <div class="footer pt-55 pb-70">
             <div class="container">
                 <div class="row">
-               
+
                     <div class="footer__item footer__copyright col-lg-5">
                         <p>© WebDev Team04 - Code Heroes <br /></p>
-                        <p>Создано с<i class="fas fa-heart animation-pulse"></i>в <a href="http://webcademy.ru" target="_blank"><span>WebCademy.ru</span> </a>в 2018 году</p>
+                        <p>Создано с<i class="fas fa-heart animation-pulse"></i>в <a href="http://webcademy.ru"target="_blank"><span>WebCademy.ru</span> </a>в 2018 году</p>
                     </div>
 
                     <nav class="footer-nav col-lg-3">

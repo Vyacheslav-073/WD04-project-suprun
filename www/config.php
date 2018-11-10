@@ -8,8 +8,8 @@ define('DB_PASS', '');
 
 // SITE SETTINGS FOR EMAILS
 define('SITE_NAME', 'личный сайт Вячеслава Супрун');
-define('SITE_EMAIL', 'info@webdew04.com');
-define('ADMIN_EMAIL', 'info@rightblog.ru');
+define('SITE_EMAIL', 'viacheslav.suprun@yandex.ru');
+define('ADMIN_EMAIL', 'viacheslav.suprun@yandex.ru');
 
 /*Устанавливает путь до корневой директории скрипта по протоколу HTTP*/
 define('HOST', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/');

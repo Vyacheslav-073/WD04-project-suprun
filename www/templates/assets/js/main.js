@@ -10,5 +10,5 @@ $(document).ready(function() {
             label.text("Вы выбрали " + this.files.length + " файла");
         }  else {
         label.text($(this).val().replace('C:\\fakepath\\',''));
-        }  
+        }
     });

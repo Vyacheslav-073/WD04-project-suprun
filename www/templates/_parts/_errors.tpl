@@ -20,10 +20,10 @@
             <div class="notify notify--text no-radius-top">
                 <?=$error['desc']?>
             </div>
-        
+
         </div>
 
-        <?php        
+        <?php
         }
-    }    
+    }
 ?>

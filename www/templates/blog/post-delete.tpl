@@ -1,7 +1,7 @@
 <div class="content">
     <div class="container user-content section-page">
         <div class="row">
-            <form class="col-md-10 offset-md-1" method="POST" action="<?=HOST?>blog/post-delete?id=<?=$post['id']?>" >
+            <form class="col-md-10 offset-md-1" method="POST" action="<?=HOST?>blog/post-delete?id=<?=$post['id']?>">
 
 				<h1>Удалить пост</h1>
 

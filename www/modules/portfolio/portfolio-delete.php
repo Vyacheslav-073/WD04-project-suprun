@@ -9,18 +9,18 @@ $title="Удалить информацию о проекте";
 
 $work=R::load('works', $_GET['id']);
 
-if(isset($_POST['workDelete'])) { 			
+if(isset($_POST['workDelete'])) {
     $postImageFolderLocation=ROOT.'usercontent/portfolio/';
     $postImage=$work->work_image;
 
     if($postImage !='') {
 		$picurl=$postImageFolderLocation. $postImage;
 
-    if(file_exists($picurl)){unlink($picurl);}						
+    if(file_exists($picurl)){unlink($picurl);}
 		$picurl320=$postImageFolderLocation.'320-'. $postImage;
 
     if(file_exists($picurl320)){unlink($picurl320);}
-				
+
         }
 
     R::trash($work);

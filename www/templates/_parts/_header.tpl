@@ -1,14 +1,14 @@
 <?php if (  isAdmin() ){
     include( ROOT . "templates/_parts/_admin-panel.tpl");
 }?>
-   
+
 <header class="header">
     <div class="header-admin__container">
         <div class="header-top">
 
             <?php include( ROOT . "templates/_parts/_header-logo.tpl"); ?>
 
-            <?php 
+            <?php
 
                 if ( isLoggedIn() ) {
 	                // Пользователь на сайте

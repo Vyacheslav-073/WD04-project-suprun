@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $title = "Редактировать профиль";
 
@@ -51,9 +51,9 @@ if (isset($_POST['profile-update'])) {
 			if (!preg_match("/\.(gif|jpg|png|jpeg)$/i", $fileName)) {
 
 				$errors[] = [
-				            'title' => 'Неверный формат файла',
-				            'desc' => '<p>Изображение должно быть в формате jpg, jpeg, gif или png.</p>',
-				        ];
+							'title' => 'Неверный формат файла',
+							'desc' => '<p>Изображение должно быть в формате jpg, jpeg, gif или png.</p>',
+						];
 			}
 
 			if ( $fileErrorMsg == 1 ) {
@@ -75,9 +75,9 @@ if (isset($_POST['profile-update'])) {
 
 				$picurl48 = $avatarFolderLocation . '48-' . $avatar;
 
-                if ( file_exists($picurl48) ) { 
-                    unlink($picurl48); 
-                }
+				if ( file_exists($picurl48) ) {
+					unlink($picurl48); 
+				}
 			}
 
 			// Перемещаем загруженный файл в нужную директорию
@@ -97,23 +97,23 @@ if (isset($_POST['profile-update'])) {
 			$hmax = 222;
 			$img = createThumbnail($target_file, $wmax, $hmax);
 			$img->writeImage($target_file);
-            
+
 			$user->avatar = $db_file_name;
-            
+
 			$target_file = $avatarFolderLocation . $db_file_name;
 			$resized_file = $avatarFolderLocation . "48-" . $db_file_name;
 			$wmax = 48;
 			$hmax = 48;
 			$img = createThumbnail($target_file, $wmax, $hmax);
 			$img->writeImage($resized_file);
-            
+
 			$user->avatarSmall = "48-" . $db_file_name;
 		}
 
 		R::store($user);
 
 		$_SESSION['logged_user'] = $user;
-        
+
 		header('Location: ' . HOST . "profile");
 		exit();
 	}

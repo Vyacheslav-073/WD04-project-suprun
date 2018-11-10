@@ -2,7 +2,7 @@
     <form class="container user-content section-page" action="<?=HOST?>portfolio/portfolio-edit?id=<?=$work['id']?>" method="post" enctype="multipart/form-data">
         <div class="row">
             <div class="col-md-10 offset-md-1">
-               
+
                 <h1>Добавить работу</h1>
 
                 <?php require ROOT. "templates/_parts/_errors.tpl"?>
@@ -50,9 +50,9 @@
                 <div class="form-group">
 
                     <label class="label">
-                       
+
                         <p class="mb-0 mt-0">Категория</p>
-                        
+
                         <select name="postCat" id="">
                             <?PHP foreach ($cats as $cat){?>
                             <option value="<?=$cat['id']?>" selected="<?PHP echo ($post['cat']==$cat['id'])?'selected':'';?>"><?=$cat['cat_title']?></option>

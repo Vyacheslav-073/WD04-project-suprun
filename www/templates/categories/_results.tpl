@@ -4,7 +4,7 @@
 		Категория успешно добавлена!
 	</div>
 
-<?php } ?> 
+<?php } ?>
 
 <?php if($_GET['result']=='catUpdate'){?>
 
@@ -12,12 +12,12 @@
 		Категория успешно отредактирована!
 	</div>
 
-<?php } ?> 
+<?php } ?>
 
 <?php if($_GET['result']=='catDeleted'){?>
 
 	<div class="notify no-radius-bottom notify--error mt-10 " data-notify-hide>
 		Категория успешно удалена!
-	</div>	
+	</div>
 
-<?php } ?> 
+<?php } ?>
